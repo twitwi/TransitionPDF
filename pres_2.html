@@ -69,7 +69,7 @@
                         images[c].onerror = images[c].onload = null
                         images.forEach((e,i) => e.classList.toggle('current', i==c))
                     }
-                    images[c].src = url
+                    setTimeout(() => {images[c].src = url}, 0)
                 }
             }
             function step(s) {
